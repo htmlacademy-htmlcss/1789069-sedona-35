@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
 </head>
 <body>
-    <header class="page-header">
+    <header class="page-header" data-test="header">
         <nav class="navigation">
             <a class="navigation-logo" href="index.html">
                 <img class="page-header-logo" src="#" alt="Логотип города Седона.">
@@ -39,13 +39,13 @@
         </nav>
     </header>
 
-    <main class="main-index">
+    <main class="main-index" data-test="main">
         <h1 class="visually-hidden">Седона</h1>
         <img class="logo" src="#" alt="Логотип 'Добро пожаловать в Седону!'.">
 
-        <section class="advantages">
+        <section class="advantages" data-test="advantages">
             <h2 class="visually-hidden">Преимущества</h2>
-            <header class="advantages-header">
+            <header class="advantages-header" data-test="hero">
                 <h3 class="advantages-header-title">Седона-небольшой городок в Аризоне, заслуживающий большего!</h2>
                 <p class="advantages-header-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
             </header>
@@ -93,14 +93,14 @@
             </ul>
         </section>
 
-        <section class="search-hotel">
+        <section class="search-hotel" data-test="search">
             <h2 class="visually-hidden">Поиск гостиницы</h2>
             <b>Заинтересовались ?</b>
             <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <button class="button button-search-hotel" type="button">Поиск гостиницы в Седоне</button>
         </section>
 
-        <section class="mailing">
+        <section class="mailing" data-test="subscribe">
             <h2 class="mailing-title">Подпишитесь на рассылку</h2>
             <p class="mailing-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -110,7 +110,7 @@
         </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
         <section class="footer-social">
             <ul class="footer-social-list">
                 <li class="footer-social-item">
