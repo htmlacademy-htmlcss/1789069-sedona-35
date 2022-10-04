@@ -16,8 +16,20 @@
 
 body {
   font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
   color: #333333;
   background-color: #ffffff;
+}
+
+.navigation-list,
+.advantages-list,
+.footer-social-list,
+.breadcrumbs,
+.filter-list,
+.product-list {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .wrapper {
@@ -27,7 +39,7 @@ body {
 }
 
 .logo {
-  height: 485px;
+  min-height: 485px;
   background-image: url("../images/logo-background.jpg");
   position: relative;
 }
@@ -41,7 +53,8 @@ body {
 .logo::after {
   position: absolute;
   content: url("../images/divider.svg");
-  top: 428px;
+  bottom: -5px;
+  left: 0;
 }
 
 .button {
@@ -192,6 +205,7 @@ body {
 }
 
 .mailing-form input {
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -244,6 +258,7 @@ body {
 }
 
 .range-input {
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -267,6 +282,7 @@ body {
 }
 
 .select-control {
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
