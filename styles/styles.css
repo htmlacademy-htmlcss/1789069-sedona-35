@@ -14,12 +14,25 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background-color: #ffffff;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .navigation-list,
@@ -28,33 +41,29 @@ body {
 .breadcrumbs,
 .filter-list,
 .product-list {
-  list-style-type: none;
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .wrapper {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
   min-height: 485px;
-  background-image: url("../images/logo-background.jpg");
-  position: relative;
+  background-color: #F2F2F2;
+  background-image: url("../images/divider.svg"), url("../images/logo-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom, center;
 }
 
 .welcome {
-  position: absolute;
-  top: 51px;
-  left: 371px;
-}
-
-.logo::after {
-  position: absolute;
-  content: url("../images/divider.svg");
-  bottom: -5px;
-  left: 0;
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
 }
 
 .button {
@@ -76,6 +85,31 @@ body {
   line-height: 36px;
 }
 
+.button-nav {
+  align-self: center;
+}
+
+.header {
+  background-color: aqua;
+}
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-user {
+  max-width: 270px;
+  margin-left: auto;
+}
+
 .navigation-link {
   font-size: 20px;
   line-height: 24px;
@@ -85,9 +119,16 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   text-transform: capitalize;
+  padding: 20px 16px;
+}
+
+.navigation-logo {
+  margin-right: 30px;
 }
 
 .advantages-hero-title {
+  width: 720px;
+  margin: 0 auto;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -99,15 +140,18 @@ body {
 .advantages-hero-text {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
   text-align: center;
 }
 
 .advantages-list {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 
 .advantages-title {
+  width: 175px;
+  margin: 0 auto;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -117,10 +161,22 @@ body {
 }
 
 .advantages-description {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
+  width: 230px;
+  margin: 0 auto;
   text-align: center;
+}
+
+.advantages-item {
+  display: flex;
+  height: 384px;
+}
+
+.advantages-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 400px;
 }
 
 .advantages-item:nth-child(1),
@@ -145,16 +201,20 @@ body {
   background: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item:nth-last-child(3)::before {
+.advantages-item:nth-last-child(3) div::before {
   content: url("../images/feature/housing.svg");
 }
 
-.advantages-item:nth-last-child(2)::before {
+.advantages-item:nth-last-child(2) div::before {
   content: url("../images/feature/eating.svg");
 }
 
-.advantages-item:nth-last-child(1)::before {
+.advantages-item:nth-last-child(1) div::before {
   content: url("../images/feature/souvenir.svg");
+}
+
+.advantages-item:nth-child(5) .advantages-image {
+  order: -1;
 }
 
 .search-hotel-title {
@@ -169,7 +229,6 @@ body {
 .search-hotel p {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -200,7 +259,6 @@ body {
 .mailing-text {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -208,7 +266,6 @@ body {
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 400;
   color: #000000;
 }
 
@@ -217,10 +274,23 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-social {
+  width: 142px;
+}
+
+.footer-contacts {
+  width: 720px;
+  text-align: center;
+}
+
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
-  font-weight: 400;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -238,7 +308,6 @@ body {
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
-  font-weight: 400;
   color: inherit;
 }
 
@@ -251,9 +320,6 @@ body {
 }
 
 .control-input {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
   color: inherit;
 }
 
@@ -299,17 +365,9 @@ body {
   text-decoration: none;
 }
 
-.product-type,
-.product-card-price {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-}
-
 .product-card-rating {
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
   text-transform: uppercase;
 }
 
