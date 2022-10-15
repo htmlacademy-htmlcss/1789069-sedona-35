@@ -303,6 +303,9 @@ body {
 }
 
 .mailing-text {
+  width: 475px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
