@@ -63,7 +63,7 @@
         <section class="filter-products">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="filter-group">
+            <fieldset class="filter-group filter-group-infrastructure">
               <legend class="filter-title">Инфраструктура:</legend>
               <ul class="filter-list">
                 <li class="filter-item">
@@ -87,7 +87,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter-group">
+            <fieldset class="filter-group filter-group-house">
               <legend class="filter-title">Тип жилья:</legend>
               <ul class="filter-list">
                 <li class="filter-item">
@@ -111,7 +111,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter-group">
+            <fieldset class="filter-group filter-group-price">
               <legend class="filter-title">Стоимость, ₽:</legend>
               <div class="range">
                 <div class="range-wrapper-inputs">
@@ -135,86 +135,113 @@
                 </div>
               </div>
             </fieldset>
-            <button class="button button-filter" type="submit">Применить</button>
-            <button class="button button-filter button-filter-reset" type="reset">Сбросить</button>
+            <div class="filter-form-buttons">
+              <button class="button button-filter" type="submit">Применить</button>
+              <button class="button button-filter button-filter-reset" type="reset">Сбросить</button>
+            </div>
           </form>
         </section>
       </div>
 
       <section class="catalog">
-        <h2 class="visually-hidden">Список гостиниц</h2>
-        <p class="count-hotels">Найдено гостиниц: <span>38</span></p>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="popular">Сначала популярные</option>
-          <option value="cheap">Сначала дешевые</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <a href="#" class="button button-catalog button-catalog-selected">
-          <span class="visually-hidden">Показать таблицу</span>
-        </a>
-        <a href="#" class="button button-catalog">
-          <span class="visually-hidden">Показать слайдер</span>
-        </a>
-        <a href="#" class="button button-catalog">
-          <span class="visually-hidden">Показать список</span>
-        </a>
-
+        <div class="catalog-container">
+          <h2 class="visually-hidden">Список гостиниц</h2>
+          <p class="count-hotels">Найдено гостиниц: <span>38</span></p>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="popular">Сначала популярные</option>
+            <option value="cheap">Сначала дешевые</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <a href="#" class="button button-catalog button-catalog-selected button-table">
+            <span class="visually-hidden">Показать таблицу</span>
+          </a>
+          <a href="#" class="button button-catalog button-slider">
+            <span class="visually-hidden">Показать слайдер</span>
+          </a>
+          <a href="#" class="button button-catalog button-list">
+            <span class="visually-hidden">Показать список</span>
+          </a>
+        </div>
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Amara Resort & Spa">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
-            <p class="product-type">Гостиница</p>
-            <p class="product-card-price">От 4000 ₽</p>
-            <a class="button button-more-info" href="#">Подробнее</a>
-            <a class="button button-to-favorites" href="#">В избранное</a>
-            <p class="product-card-stars">
-              <span class="visually-hidden">4 звезды</span>
-            </p>
-            <p class="product-card-rating">Рейтинг: 8,5</p>
+            <div class="product-info">
+              <p class="product-type">Гостиница</p>
+              <p class="product-card-price">От 4000 ₽</p>
+            </div>
+            <div class="product-buttons">
+              <a class="button button-more-info" href="#">Подробнее</a>
+              <a class="button button-to-favorites" href="#">В избранное</a>
+            </div>
+            <div class="product-rating">
+              <p class="product-card-stars four-stars">
+                <span class="visually-hidden">4 звезды</span>
+              </p>
+              <p class="product-card-score">Рейтинг: 8,5</p>
+            </div>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Villas at Poco Diablo">
               <h3 class="product-card-title">Villas at Poco Diablo</h3>
             </a>
-            <p class="product-type">Гостиница</p>
-            <p class="product-card-price">От 5000 ₽</p>
-            <a class="button button-more-info" href="#">Подробнее</a>
-            <a class="button button-to-favorites button-current-favorit" href="#">В избранном</a>
-            <p class="product-card-stars">
-              <span class="visually-hidden">4 звезды</span>
-            </p>
-            <p class="product-card-rating">Рейтинг: 9,2</p>
+            <div class="product-info">
+              <p class="product-type">Гостиница</p>
+              <p class="product-card-price">От 5000 ₽</p>
+            </div>
+            <div class="product-buttons">
+              <a class="button button-more-info" href="#">Подробнее</a>
+              <a class="button button-to-favorites button-current-favorit" href="#">В избранном</a>
+            </div>
+            <div class="product-rating">
+              <p class="product-card-stars four-stars">
+                <span class="visually-hidden">4 звезды</span>
+              </p>
+              <p class="product-card-score">Рейтинг: 9,2</p>
+            </div>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Desert Quail Inn">
               <h3 class="product-card-title">Desert Quail Inn</h3>
             </a>
-            <p class="product-type">Гостиница</p>
-            <p class="product-card-price">От 2500 ₽</p>
-            <a class="button button-more-info" href="#">Подробнее</a>
-            <a class="button button-to-favorites" href="#">В избранное</a>
-            <p class="product-card-stars">
-              <span class="visually-hidden">3 звезды</span>
-            </p>
-            <p class="product-card-rating">Рейтинг: 6,9</p>
+            <div class="product-info">
+              <p class="product-type">Гостиница</p>
+              <p class="product-card-price">От 2500 ₽</p>
+            </div>
+            <div class="product-buttons">
+              <a class="button button-more-info" href="#">Подробнее</a>
+              <a class="button button-to-favorites" href="#">В избранное</a>
+            </div>
+            <div class="product-rating">
+              <p class="product-card-stars three-stars">
+                <span class="visually-hidden">3 звезды</span>
+              </p>
+              <p class="product-card-score">Рейтинг: 6,9</p>
+            </div>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="GreenTree Inn">
               <h3 class="product-card-title">GreenTree Inn</h3>
             </a>
-            <p class="product-type">Гостиница</p>
-            <p class="product-card-price">От 1500 ₽</p>
-            <a class="button button-more-info" href="#">Подробнее</a>
-            <a class="button button-to-favorites" href="#">В избранное</a>
-            <p class="product-card-stars">
-              <span class="visually-hidden">2 звезды</span>
-            </p>
-            <p class="product-card-rating">Рейтинг: 5,0</p>
+            <div class="product-info">
+              <p class="product-type">Гостиница</p>
+              <p class="product-card-price">От 1500 ₽</p>
+            </div>
+            <div class="product-buttons">
+              <a class="button button-more-info" href="#">Подробнее</a>
+              <a class="button button-to-favorites" href="#">В избранное</a>
+            </div>
+            <div class="product-rating">
+              <p class="product-card-stars two-stars">
+                <span class="visually-hidden">2 звезды</span>
+              </p>
+              <p class="product-card-score">Рейтинг: 5,0</p>
+            </div>
           </li>
         </ul>
 
@@ -255,17 +282,17 @@
         <section class="footer-social">
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="button button-social" href="https://vk.com/htmlacademy">
+              <a class="button button-social button-vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button button-social" href="https://t.me/htmlacademy">
+              <a class="button button-social button-tg" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button button-social" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="button button-social button-yt" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
