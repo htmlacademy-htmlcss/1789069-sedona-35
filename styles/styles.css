@@ -20,12 +20,13 @@ html {
 
 body {
   margin: 0;
+  height: 100%;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #F2F2F2;
 }
 
 .wrapper {
@@ -34,8 +35,12 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .visually-hidden {
@@ -106,17 +111,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 400px;
 }
 
 .navigation-user {
-  max-width: 270px;
   margin-left: auto;
 }
 
 .navigation-user .navigation-link {
   min-width: 20px;
   min-height: 20px;
+  padding: 22px 12px;
 }
 
 .navigation-link {
@@ -132,12 +136,57 @@ body {
   text-transform: capitalize;
 }
 
+.navigation-link-current {
+  position: relative;
+}
+
+.navigation-link-current::before {
+  content: "";
+  width: 100%;
+  left: 0%;
+  position: absolute;
+  border-bottom: 2px solid #756257;
+  bottom: 0;
+}
+
+.header-logo {
+  margin-bottom: -10px;
+}
+
 .navigation-logo {
   margin-right: 30px;
+  z-index: 1;
+}
+
+.navigation-search {
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.navigation-favorites {
+  position: relative;
+  background-image: url("../images/icons/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.counter-likes {
+  position: absolute;
+  padding: 5px;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #7DB54F;
+  border-radius: 10px;
+  top: 11px;
+  right: 4px;
 }
 
 .button-nav {
   padding: 8px 34px;
+  margin-left: 20px;
 }
 
 .advantages-hero-title {
@@ -174,6 +223,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  word-break: break-word;
 }
 
 .advantages-item-house .advantages-title,
@@ -190,24 +240,14 @@ body {
 
 .advantages-item {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-}
-
-.advantages-item-container {
-  padding: 103px 85px 121px 85px;
-}
-
-.advantages-item-blue .advantages-item-container {
-  padding: 92px 85px 111px 85px;
-}
-
-.advantages-item-house .advantages-item-container,
-.advantages-item-food .advantages-item-container,
-.advantages-item-souvenir .advantages-item-container {
-  padding: 182px 85px 81px 85px;
+  padding: 103px 85px 121px;
 }
 
 .advantages-item-blue {
+  flex-direction: row;
+  padding: 0;
   background-color: #82B3D3;
   color: #ffffff;
 }
@@ -216,27 +256,37 @@ body {
   color: inherit;
 }
 
+.advantages-item-blue-container {
+  padding: 92px 85px 111px;
+}
+
+.advantages-item-house,
+.advantages-item-food,
+.advantages-item-souvenir {
+  padding: 182px 85px 81px;
+}
+
 .advantages-item:nth-child(even) {
-  background: rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item:nth-child(3) {
-  background: rgba(131, 179, 211, 0.2);
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item-house .advantages-item-container {
+.advantages-item-house {
   background-image: url("../images/feature/housing.svg");
   background-repeat: no-repeat;
   background-position: center 80px;
 }
 
-.advantages-item-food .advantages-item-container {
+.advantages-item-food {
   background-image: url("../images/feature/eating.svg");
   background-repeat: no-repeat;
   background-position: center 80px;
 }
 
-.advantages-item-souvenir .advantages-item-container  {
+.advantages-item-souvenir {
   background-image: url("../images/feature/souvenir.svg");
   background-repeat: no-repeat;
   background-position: center 80px;
@@ -257,7 +307,6 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  text-align: center;
   text-transform: uppercase;
   color: #000000;
 }
@@ -267,7 +316,6 @@ body {
   margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
-  text-align: center;
   width: 592px;
 }
 
@@ -298,7 +346,6 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -309,10 +356,18 @@ body {
   margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
-  text-align: center;
+}
+
+.mailing-form {
+  display: flex;
 }
 
 .mailing-form input {
+  width: 452px;
+  height: 52px;
+  background: #F2F2F2;
+  border-radius: 4px 0 0 4px;
+  border: none;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -320,30 +375,59 @@ body {
 }
 
 .button-mailing {
+  padding: 8px 50px;
   background: #82B3D3;
   border-radius: 0 4px 4px 0;
+}
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .footer-container {
   width: 1060px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 }
 
-.footer-social {
-  width: 142px;
-  margin-right: 42px;
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button-social {
+  display: block;
+  background-color: inherit;
 }
 
 .button-vk {
+  min-width: 24px;
+  min-height: 14px;
+  padding: 12px;
   background-image: url("../images/social/vk.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.footer-contacts {
-  width: 720px;
-  text-align: center;
+.button-tg {
+  min-width: 18px;
+  min-height: 15px;
+  padding: 12px;
+  background-image: url("../images/social/telegram.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.button-yt {
+  min-width: 22px;
+  min-height: 17px;
+  padding: 12px;
+  background-image: url("../images/social/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .footer-contacts-phone {
@@ -353,11 +437,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
-}
-
-.htmlacademy-link {
-  margin-left: auto;
-  align-self: center;
 }
 
 .filter {
@@ -490,6 +569,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .button-catalog {
