@@ -152,6 +152,82 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-open">
+      <div class="modal modal-auth">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="get">
+
+            <div class="auth-form-wrapper">
+
+              <div class="field-group field-group-date">
+                <label class="auth-form-label" for="auth-arrive">Дата заезда:</label>
+                <input class="field" type="text" id="auth-arrive" name="auth-arrive" value="27 апреля 2020" placeholder="27 апреля 2020">
+                <p class="auth-form-text error-text">Мы не можем отправить вас в прошлое.</p>
+              </div>
+
+              <div class="field-group field-group-date">
+                <label class="auth-form-label" for="auth-depart">Дата выезда:</label>
+                <input class="field" type="text" id="auth-depart" name="auth-depart" value="1 сентября 2023" placeholder="1 сентября 2023">
+                <p class="auth-form-text">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+
+
+              <div class="auth-number">
+
+                <div class="field-group field-group-number">
+                  <label class="auth-form-label" for="auth-adult">Взрослые:</label>
+                  <button class="auth-input-button button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество взрослых</span>
+                    <svg class="auth-input-button-icon" width="21" height="20" viewBox="0 0 21 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.39282 9V11H17.3928V9H3.39282Z"/>
+                    </svg>
+                  </button>
+                  <input class="field" type="number" id="auth-adult" name="auth-adult" min="0" step="1" value="2">
+                  <button class="auth-input-button button-plus" type="button">
+                    <span class="visually-hidden">Увеличить количество взрослых</span>
+                    <svg class="auth-input-button-icon" width="20" height="20" viewBox="0 0 20 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="field-group field-group-number field-group-child">
+                  <span class="field-label-icon">
+                    <label class="auth-form-label" for="auth-child">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
+                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                      </span>
+                    </span>
+                  </span>
+                  <button class="auth-input-button button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество детей</span>
+                    <svg class="auth-input-button-icon" width="21" height="20" viewBox="0 0 21 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.39282 9V11H17.3928V9H3.39282Z"/>
+                    </svg>
+                  </button>
+                  <input class="field" type="number" id="auth-child" name="auth-child" min="0" step="1" value="2">
+                  <button class="auth-input-button button-plus" type="button">
+                    <span class="visually-hidden">Увеличить количество детей</span>
+                    <svg class="auth-input-button-icon" width="20" height="20" viewBox="0 0 20 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+            <button class="button blue-button auth-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </div>
 </body>
 </html>
