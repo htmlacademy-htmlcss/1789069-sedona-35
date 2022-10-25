@@ -552,8 +552,8 @@ body {
 
 /* .modal-container-open {
   display: flex;
-} */
-
+}
+ */
 .modal {
   position: relative;
   margin: auto;
@@ -881,7 +881,7 @@ body {
 }
 
 .breadcrumbs-link-main {
-  display: inline-block;
+  display: block;
   min-width: 13px;
   min-height: 15px;
   background-image: url("../images/icons/home.svg");
@@ -912,6 +912,7 @@ body {
   width: 8px;
   height: 21px;
   left: 23px;
+  top: -3px;
 }
 
 .breadcrumbs-item:last-child::after {
