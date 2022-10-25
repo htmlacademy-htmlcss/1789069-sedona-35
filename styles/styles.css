@@ -135,6 +135,36 @@ body {
   line-height: 36px;
 }
 
+.form-input {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.form-input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+.form-input:hover {
+  background-color: #E6E6E6;
+}
+
+.form-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.form-input:active {
+  outline: 2px solid #000000;
+}
+
 .navigation {
   display: flex;
   width: 1060px;
@@ -418,22 +448,10 @@ body {
   display: flex;
 }
 
-.mailing-form input {
-  box-sizing: border-box;
+.mailing-form .form-input {
   width: 452px;
   padding: 14px 20px;
-  background: #F2F2F2;
   border-radius: 4px 0 0 4px;
-  border: none;
-  font: inherit;
-  font-size: 18px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.mailing-form input:focus,
-.mailing-form input:active {
-  outline: none;
 }
 
 .button-mailing {
@@ -552,8 +570,8 @@ body {
 
 /* .modal-container-open {
   display: flex;
-}
- */
+} */
+
 .modal {
   position: relative;
   margin: auto;
@@ -661,11 +679,7 @@ body {
 }
 
 .field {
-  outline: none;
-  border: none;
-  background-color: #F2F2F2;
   border-radius: 4px;
-  box-sizing: border-box;
   appearance: none;
 }
 
@@ -681,6 +695,13 @@ body {
 }
 
 .field-group-date .field {
+  padding: 12px 20px;
+  width: 440px;
+  font: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
   background-image: url("../images/icons/date.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -702,16 +723,6 @@ body {
   align-items: center;
 }
 
-.field-group-date .field {
-  padding: 12px 20px 12px 20px;
-  width: 440px;
-  font: inherit;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000000;
-}
-
 .field-group-number .field {
   width: 31px;
   font: inherit;
@@ -721,6 +732,7 @@ body {
   color: #000000;
   border-radius: 0;
   padding: 14px 10px;
+  z-index: 1;
 }
 
 .field-group-number .auth-form-label {
@@ -736,6 +748,7 @@ body {
   padding: 0;
   margin: 0;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -1015,16 +1028,8 @@ body {
 }
 
 .range-input {
-  box-sizing: border-box;
   width: 143px;
   padding: 12px 20px;
-  font: inherit;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000000;
-  background: #F2F2F2;
-  border: none;
   appearance: textfield;
 }
 
