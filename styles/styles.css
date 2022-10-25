@@ -568,9 +568,9 @@ body {
   display: none;
 }
 
-/* .modal-container-open {
+.modal-container-open {
   display: flex;
-} */
+}
 
 .modal {
   position: relative;
@@ -646,6 +646,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  color: inherit;
   text-transform: none;
 }
 
@@ -653,7 +654,7 @@ body {
   color: #FF5757;
 }
 
-.auth-number {
+.auth-form-number-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -689,6 +690,10 @@ body {
   margin: 0;
 }
 
+.field-group-number .field {
+  -moz-appearance: textfield;
+}
+
 .field-group-date .field::-webkit-calendar-picker-indicator {
   appearance: none;
   display: none;
@@ -714,7 +719,6 @@ body {
 
 .field-group-date .auth-form-text {
   grid-column: 2 / 3;
-  text-align: left;
   padding-left: 20px;
 }
 
@@ -725,6 +729,7 @@ body {
 
 .field-group-number .field {
   width: 31px;
+  height: 48px;
   font: inherit;
   font-size: 18px;
   line-height: 20px;
@@ -747,6 +752,7 @@ body {
   height: 48px;
   padding: 0;
   margin: 0;
+  background-color: #F2F2F2;
   border: none;
   outline: none;
   cursor: pointer;
@@ -754,17 +760,6 @@ body {
 
 .auth-input-button:focus {
   outline: none;
-}
-
-.auth-form-button {
-  background-color: #83B3D3;
-  border-radius: 10px;
-  padding: 18px;
-  font: inherit;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  cursor: pointer;
 }
 
 .button-minus {
@@ -801,6 +796,7 @@ body {
 }
 
 .tooltip-toggle {
+  display: block;
   width: 26px;
   height: 26px;
   border: none;
@@ -823,6 +819,7 @@ body {
 
 .field-label-icon {
   margin-right: 72px;
+  position: relative;
 }
 
 .tooltip-text {
@@ -862,6 +859,17 @@ body {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.auth-form-button {
+  background-color: #83B3D3;
+  border-radius: 10px;
+  padding: 18px;
+  font: inherit;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .filter {
@@ -1017,10 +1025,6 @@ body {
   opacity: 0.3;
 }
 
-.control-input {
-  color: inherit;
-}
-
 .range-wrapper-inputs {
   display: flex;
   gap: 2px;
@@ -1031,6 +1035,7 @@ body {
   width: 143px;
   padding: 12px 20px;
   appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 .filter-label {
