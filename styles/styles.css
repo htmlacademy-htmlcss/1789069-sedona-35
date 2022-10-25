@@ -1028,18 +1028,35 @@ body {
   appearance: textfield;
 }
 
-.range-input::-webkit-outer-spin-button,
-.range-input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
+.filter-label {
+  position: relative;
 }
 
-.range-input::placeholder {
+.filter-label::after {
+  position: absolute;
+  right: 22px;
+  top: 12px;
   font: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  padding-left: 84px;
+  color: #000000;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.filter-label:first-child::after {
+  content: "от";
+}
+
+.filter-label:last-child::after {
+  content: "до";
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .range-input:hover {
