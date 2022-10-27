@@ -165,6 +165,12 @@ body {
   outline: 2px solid #000000;
 }
 
+.form-input:disabled {
+  background-color: #E5E5E5;
+  outline: none;
+  opacity: 0.5;
+}
+
 .navigation {
   display: flex;
   width: 1060px;
@@ -201,6 +207,19 @@ body {
   text-transform: capitalize;
 }
 
+.navigation-link:hover {
+  opacity: 0.8;
+}
+
+.navigation-link:focus {
+  outline: none;
+  opacity: 0.5;
+}
+
+.navigation-link:active {
+  opacity: 0.3;
+}
+
 .navigation-link-current::before {
   content: "";
   position: absolute;
@@ -220,6 +239,19 @@ body {
   z-index: 1;
 }
 
+.navigation-logo:hover {
+  opacity: 0.8;
+}
+
+.navigation-logo:focus {
+  outline: none;
+  opacity: 0.5;
+}
+
+.navigation-logo:active {
+  opacity: 0.3;
+}
+
 .navigation-search {
   background-image: url("../images/icons/search.svg");
   background-repeat: no-repeat;
@@ -237,9 +269,12 @@ body {
 
 .counter-likes {
   position: absolute;
-  padding: 5px;
+  box-sizing: border-box;
+  width: 20px;
+  padding: 5px 5px 5px 4px;
   font-size: 10px;
   line-height: 10px;
+  font-weight: 400;
   text-align: center;
   color: #FFFFFF;
   background: #7DB54F;
@@ -254,9 +289,9 @@ body {
 }
 
 .advantages-hero-title {
-  margin-top: 0;
+  margin-top: 69px;
   margin-bottom: 25px;
-  padding: 69px 290px 0;
+  padding: 0 280px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -323,7 +358,7 @@ body {
 }
 
 .advantages-item {
-  padding: 103px 85px 121px;
+  padding: 103px 80px 121px;
 }
 
 .advantages-item-blue {
@@ -452,6 +487,7 @@ body {
   width: 452px;
   padding: 14px 20px;
   border-radius: 4px 0 0 4px;
+  font-weight: 400;
 }
 
 .button-mailing {
@@ -957,7 +993,7 @@ body {
 }
 
 .filter-group-house {
-  margin-right: 150px;
+  margin-right: 152px;
 }
 
 .filter-group-price {
@@ -1025,10 +1061,16 @@ body {
   opacity: 0.3;
 }
 
+.control-input[disabled] {
+  opacity: 0.5;
+  background-color: #000000;
+  color: #000;
+}
+
 .range-wrapper-inputs {
   display: flex;
   gap: 2px;
-  margin-bottom: 46px;
+  margin-bottom: 43px;
 }
 
 .range-input {
@@ -1044,7 +1086,7 @@ body {
 
 .filter-label::after {
   position: absolute;
-  right: 22px;
+  right: 20px;
   top: 12px;
   font: inherit;
   font-size: 18px;
@@ -1067,19 +1109,6 @@ body {
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
-}
-
-.range-input:hover {
-  background-color: #E6E6E6;
-}
-
-.range-input:focus {
-  background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
-}
-
-.range-input:active {
-  outline: 2px solid #000000;
 }
 
 .filter-label:first-child > .range-input {
@@ -1134,6 +1163,11 @@ body {
 .range-toggle:active {
   outline: 2px solid #83B3D3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.range-toggle:disabled {
+  outline: none;
+  opacity: 0.5;
 }
 
 .filter-form-buttons {
