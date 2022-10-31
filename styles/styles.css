@@ -765,8 +765,8 @@ body {
   line-height: 20px;
   font-weight: 700;
   color: #000000;
+  text-align: center;
   border-radius: 0;
-  padding: 14px 10px;
   z-index: 1;
 }
 
@@ -1209,6 +1209,7 @@ body {
 }
 
 .count-hotels {
+  max-width: 500px;
   margin: 0;
   margin-right: auto;
   font-size: 30px;

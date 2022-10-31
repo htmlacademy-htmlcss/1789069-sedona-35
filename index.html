@@ -47,7 +47,7 @@
     <main class="main main-container">
       <h1 class="visually-hidden">Седона</h1>
       <div class="logo">
-        <img class="welcome" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona because the Grand Kanyon sucks!">
+        <img class="welcome" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona because the Grand Kanyon sucks!.">
       </div>
       <section class="advantages">
         <h2 class="advantages-hero-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -105,7 +105,7 @@
         <h2 class="mailing-title">Подпишитесь на рассылку</h2>
         <p class="mailing-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="form-input" type="email" name="email" placeholder="Ваш e-mail">
+          <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
           <button class="button big-button button-mailing blue-button" type="submit">Подписаться</button>
         </form>
       </section>
@@ -168,13 +168,13 @@
 
               <div class="field-group field-group-date">
                 <label class="auth-form-label" for="auth-arrive">Дата заезда:</label>
-                <input class="field form-input" type="text" id="auth-arrive" name="auth-arrive" value="27 апреля 2020" placeholder="Укажите дату">
+                <input class="field form-input" type="text" id="auth-arrive" name="auth-arrive" value="27 апреля 2020" placeholder="Укажите дату" required>
                 <p class="auth-form-text error-text">Мы не можем отправить вас в прошлое.</p>
               </div>
 
               <div class="field-group field-group-date">
                 <label class="auth-form-label" for="auth-depart">Дата выезда:</label>
-                <input class="field form-input" type="text" id="auth-depart" name="auth-depart" value="1 сентября 2023" placeholder="Укажите дату">
+                <input class="field form-input" type="text" id="auth-depart" name="auth-depart" value="1 сентября 2023" placeholder="Укажите дату" required>
                 <p class="auth-form-text">На эти даты есть свободные номера. Пока есть.</p>
               </div>
 
@@ -189,7 +189,7 @@
                       <path d="M3.39282 9V11H17.3928V9H3.39282Z"/>
                     </svg>
                   </button>
-                  <input class="field form-input" type="number" id="auth-adult" name="auth-adult" min="0" step="1" value="2">
+                  <input class="field form-input" type="number" id="auth-adult" name="auth-adult" min="0" step="1" value="2" required>
                   <button class="auth-input-button button-plus" type="button">
                     <span class="visually-hidden">Увеличить количество взрослых</span>
                     <svg class="auth-input-button-icon" width="20" height="20" viewBox="0 0 20 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +214,7 @@
                       <path d="M3.39282 9V11H17.3928V9H3.39282Z"/>
                     </svg>
                   </button>
-                  <input class="field form-input" type="number" id="auth-child" name="auth-child" min="0" step="1" value="2">
+                  <input class="field form-input" type="number" id="auth-child" name="auth-child" min="0" step="1" value="2" required>
                   <button class="auth-input-button button-plus" type="button">
                     <span class="visually-hidden">Увеличить количество детей</span>
                     <svg class="auth-input-button-icon" width="20" height="20" viewBox="0 0 20 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
